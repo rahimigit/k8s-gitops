@@ -1,12 +1,9 @@
 ---
 name: Diff Helm Releases on Pull Requests
 
-on: # yamllint disable-line rule:truthy
-  pull_request:
-    branches:
-      - master
-    paths:
-      - "**.yaml"
+on:
+  # automatic triggers removed 2026-10-30 to stop burning hosted-runner minutes; run manually
+  workflow_dispatch:
 
 env:
   conf_live_branch: master
